@@ -12,16 +12,21 @@ flag2 = False
 # else:
 #     print("совершеннолетний")
 
-mark = 59
+mark = int(input("Введите число: "))
 
-if mark >= 90:
-    print("Отлично")
+if mark < 0:
+    print("Ошибка: оценка не может быть отрицательной")
     
-elif mark >= 75:
+elif mark > 100:
+    print("Ошибка: оценка не может быть больше 100")
+
+elif mark >= 90 and mark <= 100:
+    print("Отлично")
+
+elif mark >= 75 and mark <= 89:
     print("Хорошо")
 
-elif mark >= 60:
+elif mark >= 60 and mark <= 74:
     print("Удовлетворительно")
-    
 else:
     print("Неудовлетворительно")
